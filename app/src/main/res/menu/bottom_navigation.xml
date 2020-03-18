@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_book"
+        android:icon="@drawable/icon_book"
+        android:title="Справочник" />
+
+    <item
+        android:id="@+id/nav_test"
+        android:icon="@drawable/icon_lamp"
+        android:title="Тест" />
+
+    <item
+        android:id="@+id/nav_account"
+        android:icon="@drawable/icon_account"
+        android:title="Личный кабинет" />
+
+</menu>
