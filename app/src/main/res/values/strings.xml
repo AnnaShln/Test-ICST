@@ -5,5 +5,8 @@
     <string name="mail">Test ICST</string>
     <string name="testImage">just an image</string>
     <string name="testing_text">Testing text</string>
+    <string name="question1">Вот тут допустим будет вопросик</string>
+    <string name="question1answer1">А тут первый вариант ответа</string>
+    <string name="question1answer2">А тут второй</string>
 
 </resources>
