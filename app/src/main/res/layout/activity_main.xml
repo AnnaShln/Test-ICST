@@ -16,7 +16,7 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/testing_text"
+            android:text="@string/test_image"
             android:visibility="visible" />
     </FrameLayout>
 
@@ -26,8 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/lightGrey"
-        app:itemTextColor="@color/darkGrey"
-        app:itemIconTint="@color/darkGrey"
+        app:itemIconTint="@color/themeColor"
         app:menu="@menu/bottom_navigation" />
 
 </RelativeLayout>

@@ -4,16 +4,17 @@
     <item
         android:id="@+id/nav_book"
         android:icon="@drawable/spravochnik"
-        android:title="Справочник" />
+        android:title=""/>
 
     <item
         android:id="@+id/nav_test"
         android:icon="@drawable/test"
-        android:title="Тест" />
+        android:title=""/>
 
     <item
         android:id="@+id/nav_account"
-        android:icon="@drawable/lk"
-        android:title="Личный кабинет" />
+        android:icon="@drawable/info"
+        android:title=""/>
+
 
 </menu>
