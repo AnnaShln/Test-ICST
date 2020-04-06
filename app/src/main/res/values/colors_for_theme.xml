@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_text">#D4D4D4</color>
+    <color name="color_subtitle">#7b7b7b</color>
+    <color name="color_title">#579c83</color>
+    <color name="color_selected_icon">#6FB29A</color>
+    <color name="color_not_selected_icon">#D4D4D4</color>
+    <color name="color_lines_and_backgrounds">#f4f4f4</color>
+</resources>
