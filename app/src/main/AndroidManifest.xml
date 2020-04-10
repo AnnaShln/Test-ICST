@@ -8,15 +8,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-            android:label="MainActivity">
+        <activity android:name=".Intro"
+            android:label="Intro">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.testicst.Intro"
+        <activity android:name="com.example.testicst.MainActivity"
             android:label="@string/app_intro" />
         <activity android:name="com.example.testicst.Handbook"
             android:label="@string/hand_book" />
