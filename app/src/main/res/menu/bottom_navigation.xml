@@ -2,19 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/nav_book"
-        android:icon="@drawable/spravochnik"
-        android:title=""/>
-
-    <item
         android:id="@+id/nav_test"
         android:icon="@drawable/test"
-        android:title=""/>
+        android:title="Тест"/>
+    <item
+        android:id="@+id/nav_book"
+        android:icon="@drawable/spravochnik"
+        android:title="Справочник"/>
 
     <item
-        android:id="@+id/nav_account"
+        android:id="@+id/nav_about"
         android:icon="@drawable/info"
-        android:title=""/>
+        android:title="Об ИКНТ"/>
 
 
 </menu>

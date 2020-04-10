@@ -152,4 +152,14 @@ WEB-Дизайнер;
     <string name="Group8_name2">
         "Инноватика 27.03.05"
     </string>
+    <string name="hand_book">handbook</string>
+    <string name="intro_first_title">Welcome!</string>
+    <string name="intro_first_description">something about our app</string>
+    <string name="intro_second_title">Pass the test!</string>
+    <string name="intro_second_description">test description and profit</string>
+    <string name="intro_third_title">Read the book!</string>
+    <string name="intro_third_description">what you can find in the book</string>
+    <string name="intro_forth_title">Go to ICST!</string>
+    <string name="intro_forth_description">something about ICST</string>
+    <string name="but_start_test">Пройти тест</string>
 </resources>

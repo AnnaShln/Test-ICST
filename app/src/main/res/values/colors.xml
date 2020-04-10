@@ -3,5 +3,6 @@
     <color name="themeColor">#6FB29A</color>
     <color name="darkGrey">#D4D4D4</color>
     <color name="lightGrey">#F4F4F4</color>
+    <color name="darkestGrey">#7b7b7b</color>
     <color name="white">#FFFFFF</color>
 </resources>
