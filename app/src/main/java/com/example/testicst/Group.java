@@ -17,8 +17,6 @@ public class Group {
         this.expanded = false;
     }
 
-    public Group() {
-    }
 
     public String getTitle() {
         return title;

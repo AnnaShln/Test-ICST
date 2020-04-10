@@ -31,7 +31,8 @@ public class Handbook extends AppCompatActivity {
 
     private void initData(){
         groupList = new ArrayList<>();
-        groupList.add(new Group("@string/Group1", "@string/Group1_description", "@string/Group1_professions"));
-        groupList.add(new Group("@string/Group2", "@string/Group1_description", "@string/Group1_professions"));
+        groupList.add(new Group(getString(R.string.Group1), getString(R.string.Group1_description), getString(R.string.Group1_professions)));
+        groupList.add(new Group(getString(R.string.Group2), getString(R.string.Group1_description), getString(R.string.Group1_professions)));
+        groupList.add(new Group(getString(R.string.Group3), getString(R.string.Group1_description), getString(R.string.Group1_professions)));
     }
 }

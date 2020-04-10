@@ -1,3 +1,4 @@
+/*
 package com.example.testicst;
 
 public class Specialty extends Group {
@@ -14,3 +15,4 @@ public class Specialty extends Group {
     }
 
 }
+*/
