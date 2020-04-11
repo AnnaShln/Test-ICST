@@ -162,4 +162,14 @@ WEB-Дизайнер;
     <string name="intro_forth_title">Go to ICST!</string>
     <string name="intro_forth_description">something about ICST</string>
     <string name="but_start_test">Пройти тест</string>
+
+    <string name="counter1">1/20</string>
+    <string name="quest1">1. Выбери проект, в разработке которого ты бы хотел
+        поучаствовать</string>
+    <string name="quest1ans1">Платформа машинного интеллекта, которая поможет организациям
+        строить приложения обработки больших данных </string>
+    <string name="quest1ans2">Проект умного города</string>
+    <string name="quest1ans3">Программное обеспечение, предназначенное для работы на смартфонах,
+        планшетах и других мобильных устройствах, разработанное для повышения
+        производительности устройства</string>
 </resources>

@@ -31,6 +31,7 @@
         android:layout_marginEnd="108dp"
         android:background="@drawable/button_style"
         android:text="@string/but_start_test"
+        android:textAllCaps="false"
         android:textColor="@color/white"
         android:textSize="26sp"
         app:layout_constraintBottom_toBottomOf="parent"
