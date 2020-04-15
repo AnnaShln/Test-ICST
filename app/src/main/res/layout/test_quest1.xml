@@ -5,19 +5,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:paddingLeft="30dp"
+    android:paddingRight="30dp"
+    android:paddingTop="30dp"
+    android:paddingBottom="25dp">
 
     <Button
-        android:id="@+id/quest1ans3"
-        android:layout_width="328dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="55dp"
-        android:background="@drawable/answers_style"
+        android:id="@+id/quest1_ans3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/change_color_for_ans"
         android:gravity="start"
         android:padding="15dp"
         android:text="@string/quest1ans3"
@@ -25,23 +24,16 @@
         android:textColor="@color/white"
         android:textIsSelectable="false"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quest1ans2" />
+        app:layout_constraintTop_toBottomOf="@+id/quest1_ans1" />
 
     <Button
-        android:id="@+id/quest1ans2"
-        android:layout_width="328dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="26dp"
-        android:background="@drawable/answers_style"
+        android:id="@+id/quest1_ans2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/change_color_for_ans"
         android:gravity="start"
         android:padding="15dp"
         android:text="@string/quest1ans2"
@@ -49,59 +41,38 @@
         android:textColor="@color/white"
         android:textIsSelectable="false"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/quest1ans3"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quest1ans1" />
+        app:layout_constraintTop_toBottomOf="@+id/quest1" />
 
     <TextView
-        android:id="@+id/counter1"
+        android:id="@+id/counter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="342dp"
-        android:layout_marginRight="342dp"
-        android:layout_marginBottom="18dp"
         android:text="@string/counter1"
         android:textColor="@color/darkestGrey"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/quest1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/quest1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/quest1"
-        android:layout_width="328dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="18dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginRight="51dp"
-        android:layout_marginBottom="39dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:text="@string/quest1"
         android:textColor="@color/darkestGrey"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/quest1ans1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/counter1" />
+        app:layout_constraintTop_toBottomOf="@+id/counter" />
 
     <Button
-        android:id="@+id/quest1ans1"
-        android:layout_width="328dp"
-        android:layout_height="99dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="26dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="13dp"
-        android:background="@drawable/answers_style"
+        android:id="@+id/quest1_ans1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/change_color_for_ans"
         android:gravity="start"
         android:padding="15dp"
         android:text="@string/quest1ans1"
@@ -109,16 +80,18 @@
         android:textColor="@color/white"
         android:textIsSelectable="false"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/quest1ans2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/quest1" />
+        app:layout_constraintTop_toBottomOf="@+id/quest1_ans2" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guideline"
+    <ImageButton
+        android:id="@+id/next_quest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="32dp" />
+        android:onClick="nextQuest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_appintro_navigate_next_white"
+        android:contentDescription="TODO" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

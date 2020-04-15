@@ -8,6 +8,6 @@
         android:height="70dp"
         />
     <solid
-        android:color="@color/themeColor"
+        android:color="@color/darkestGrey"
         />
 </shape>

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="themeColor">#6FB29A</color>
+    <color name="darkGreen">#579C83</color>
     <color name="darkGrey">#D4D4D4</color>
     <color name="lightGrey">#F4F4F4</color>
     <color name="darkestGrey">#7b7b7b</color>
