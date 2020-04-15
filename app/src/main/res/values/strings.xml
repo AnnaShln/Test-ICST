@@ -172,4 +172,71 @@ WEB-Дизайнер;
     <string name="quest1ans3">Программное обеспечение, предназначенное для работы на смартфонах,
         планшетах и других мобильных устройствах, разработанное для повышения
         производительности устройства</string>
+    <string name="quest2">При решении задач мне больше нравится…</string>
+    <string name="quest2ans1">Четко следовать  готовому алгоритму</string>
+    <string name="quest2ans2">Разбивать задачу на составные части,
+        уделять внимание деталям и замечать мелочи</string>
+    <string name="quest3">Выбери одно или несколько утверждений, которые подходят тебе</string>
+    <string name="quest3ans1">Я хорошо разбираюсь в новинках мира IT и слежу за рынком</string>
+    <string name="quest3ans2">Я не боюсь больших и сложных вычислений</string>
+    <string name="quest4">Решая задачу, я предпочитаю</string>
+    <string name="quest4ans1">Разработать план действий, систематизировать доступную мне информацию
+        и только после этого приступать к решению</string>
+    <string name="quest4ans2">Продумывать свои действия по ходу решения</string>
+    <string name="quest5">У меня лучше получается</string>
+    <string name="quest5ans1">Руководить командой</string>
+    <string name="quest5ans2">Работать в команде</string>
+    <string name="quest5ans3">Работать в одиночку</string>
+    <string name="quest6">Что важнее?</string>
+    <string name="quest6ans1">Эффективность</string>
+    <string name="quest6ans2">Скорость выполнения</string>
+    <string name="quest7">Мне больше нравится</string>
+    <string name="quest7ans1">Физика</string>
+    <string name="quest7ans2">Информатика</string>
+    <string name="quest7ans3">Не могу определиться</string>
+    <string name="quest8">Предпочтение в работе я отдаю</string>
+    <string name="quest8ans1">Обработке данных для продукта</string>
+    <string name="quest8ans2">Продвижению продукта</string>
+    <string name="quest9">Мне кажется интереснее работа с…</string>
+    <string name="quest9ans1">С аппаратной частью серверов</string>
+    <string name="quest9ans2">С софтом на ПК</string>
+    <string name="quest9ans3">С данными на серверах</string>
+    <string name="quest10">В работе я предпочитаю…</string>
+    <string name="quest10ans1">концентрировать силы в одном проекте</string>
+    <string name="quest10ans2">решать задачи разного рода</string>
+    <string name="quest11">В мире IT самое главное</string>
+    <string name="quest11ans1">Следить за новыми и перспективными проектами</string>
+    <string name="quest11ans2">Подстраиваться под ныне имеющийся рынок</string>
+    <string name="quest12">При разработке приложения/кода в команде главное</string>
+    <string name="quest12ans1">Инициативность</string>
+    <string name="quest12ans2">Самостоятельность</string>
+    <string name="quest13">Для меня главный результат работы</string>
+    <string name="quest13ans1">Хорошо функционирующее/ая приложение/программа</string>
+    <string name="quest13ans2">Одобрение со стороны заказчика/пользователей</string>
+    <string name="quest14">Предпочтение я отдаю</string>
+    <string name="quest14ans1">Проверке рабочего продукта</string>
+    <string name="quest14ans2">Разработке продукта</string>
+    <string name="quest15">Что важнее?</string>
+    <string name="quest15ans1">Интерфейс</string>
+    <string name="quest15ans2">Минимум ошибок</string>
+    <string name="quest15ans3">Безопасность</string>
+    <string name="quest16">Выбери одно или несколько утверждений, которые подходят тебе</string>
+    <string name="quest16ans1">Я легко нахожу ошибки в работах других людей и
+        быстро нахожу способы их исправить</string>
+    <string name="quest16ans2">Я умею работать с большим количеством информации,
+        люблю систематизировать и выделять главное</string>
+    <string name="quest17">Что думаешь о постоянной работе за компьютером?</string>
+    <string name="quest17ans1">Необходимая часть жизни любого разработчика</string>
+    <string name="quest17ans2">Лучше сочетать с устным/письменным планированием</string>
+    <string name="quest18">В работе важнее всего</string>
+    <string name="quest18ans1">сосредоточение на итоговом результате</string>
+    <string name="quest18ans2">исследование сопряженных с работой областей</string>
+    <string name="quest19">Если кто-то критикует работу команды, я…</string>
+    <string name="quest19ans1">Попрошу тщательное описание спорных моментов</string>
+    <string name="quest19ans2">Начну обсуждение с командой разработки</string>
+    <string name="quest19ans3">Разберу спорные моменты сам</string>
+    <string name="quest20">При решении задач мне больше нравится</string>
+    <string name="quest20ans1">подходить к решению творчески</string>
+    <string name="quest20ans2">мыслить креативно и искать нестандартные решения</string>
+
 </resources>
