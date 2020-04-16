@@ -1,5 +1,6 @@
 package com.example.testicst;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -7,7 +8,6 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 public class Question1 extends AppCompatActivity {
 
@@ -20,36 +20,45 @@ public class Question1 extends AppCompatActivity {
 
     public void nextQuest (View v) {
 
-        ImageButton customButton = findViewById(R.id.next_quest);
+        ImageButton next = findViewById(R.id.next_quest);
         TextView counter = findViewById(R.id.counter);
         TextView question = findViewById(R.id.quest1);
         Button firstAns = findViewById(R.id.quest1_ans1);
         Button secondAns = findViewById(R.id.quest1_ans2);
         Button thirdAns = findViewById(R.id.quest1_ans3);
 
-        int c = getNumber(counter) + 1;
+        int c = getNumber(counter);
 
-        String s = getStringResourceByName(createCounter(c));
-        String p = getStringResourceByName(createQuestion(c));
-        counter.setText(s);
-        question.setText(p);
+        if (c < 20) {
 
-        if (c == 5 || c == 7 || c == 9 || c == 15 || c == 19) {
-            String ans1 = getStringResourceByName(createAns1(c));
-            String ans2 = getStringResourceByName(createAns2(c));
-            String ans3 = getStringResourceByName(createAns3(c));
-            firstAns.setText(ans1);
-            secondAns.setText(ans2);
-            thirdAns.setText(ans3);
-            thirdAns.setVisibility(View.VISIBLE);
+            String s = getStringResourceByName(createCounter(c + 1));
+            String p = getStringResourceByName(createQuestion(c + 1));
+            counter.setText(s);
+            question.setText(p);
+
+            if (c == 4 || c == 6 || c == 8 || c == 14 || c == 18) {
+                String ans1 = getStringResourceByName(createAns1(c + 1));
+                String ans2 = getStringResourceByName(createAns2(c + 1));
+                String ans3 = getStringResourceByName(createAns3(c + 1));
+                firstAns.setText(ans1);
+                secondAns.setText(ans2);
+                thirdAns.setText(ans3);
+                thirdAns.setVisibility(View.VISIBLE);
+            } else {
+                String ans1 = getStringResourceByName(createAns1(c + 1));
+                String ans2 = getStringResourceByName(createAns2(c + 1));
+                firstAns.setText(ans1);
+                secondAns.setText(ans2);
+                thirdAns.setVisibility(View.GONE);
+            }
         } else {
-            String ans1 = getStringResourceByName(createAns1(c));
-            String ans2 = getStringResourceByName(createAns2(c));
-            firstAns.setText(ans1);
-            secondAns.setText(ans2);
-            thirdAns.setVisibility(View.GONE);
+            next.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+                    Intent intent = new Intent(Question1.this, MainActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
-
     }
 
     private String getStringResourceByName(String aString) {
