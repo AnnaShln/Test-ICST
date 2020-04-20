@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,12 +25,18 @@ public class Question1 extends AppCompatActivity {
     RadioButton mFirstAns;
     RadioButton mSecondAns;
     RadioButton mThirdAns;
+    ImageButton mPreviousQue;
     int questionNumber; //номер вопроса
     QuestionsDbHelper dbHelper;
     ArrayList<String> allQuestions;
     RadioGroup mRadioGroup;
+    static final int valueQuestions = 20; //Количество вопросов
+    boolean isPreviousQue = false; //Нужно для нажатии кнопки "Назад"
 
-    Integer[] pointsGroup = new Integer[8];  //Баллы у каждой группы
+    /**
+     * В каждой ячейке - массив (например [1, 2, 3]) - номера групп, которым нужно добавить балл
+     */
+    ArrayList<Integer[]> userAnswers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +50,7 @@ public class Question1 extends AppCompatActivity {
         mSecondAns = findViewById(R.id.quest1_ans2);
         mThirdAns = findViewById(R.id.quest1_ans3);
         mRadioGroup = findViewById(R.id.answerOptions);
+        mPreviousQue = findViewById(R.id.back_quest);
         //получаем ссылку на базу данных
         dbHelper = new QuestionsDbHelper(this);
         //получаем все вопросы, содержащихся в БД
@@ -55,13 +63,16 @@ public class Question1 extends AppCompatActivity {
      */
     public void nextQuest (View v) {
 
-        if (checkButtons()) {
+        if (checkButtons() || isPreviousQue) {
 
-            checkAnswer(v);
+            if (!isPreviousQue) checkAnswer(v);
+            else isPreviousQue = false;
 
-            if (questionNumber < 20) {
+            if (questionNumber < valueQuestions) {
 
                 questionNumber++; //Следующий вопрос
+                if (questionNumber > 1) mPreviousQue.setVisibility(View.VISIBLE);
+                else mPreviousQue.setVisibility(View.INVISIBLE);
                 ArrayList<String> answers = dbHelper.getAnswersOnQue(questionNumber); //Все ответы на вопрос
                 //Счётчик в xml, тут что-то подчёркивается, если знаете как исправить, исправьте плз
                 mCounter.setText(Integer.toString(questionNumber) + getString(R.string.counterW));
@@ -77,15 +88,9 @@ public class Question1 extends AppCompatActivity {
 
             } else {
                 Intent intent = new Intent(this, TestResults.class);
-                //При отправки Integer[] писало ошибку, т.к. при заполнении
-                //некоторые группы не получали баллов и оставались null
-                int[] result = new int[8];
-                for (int i = 0; i < 8; i++) {
-                    if (pointsGroup[i] == null) result[i] = 0;
-                    else result[i] = pointsGroup[i];
-                }
+
                 //отправляем массив баллов
-                intent.putExtra("POINTS", result);
+                intent.putExtra("POINTS", getPointFromArray());
 
                 startActivity(intent);
 
@@ -94,38 +99,39 @@ public class Question1 extends AppCompatActivity {
         }
     }
 
-    /**
-     * Проверяет выбор юзера и считает баллы
-     */
     private void checkAnswer(View v) {
         ArrayList<String> answers = dbHelper.getAnswersOnQue(questionNumber);
 
         if (mFirstAns.isChecked()) {
             Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(0));
-            countPoint(points);
+            userAnswers.add(points);
         }
 
         else if (mSecondAns.isChecked()) {
             Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(1));
-            mSecondAns.setChecked(false);
-            countPoint(points);
+            userAnswers.add(points);
         }
 
         else if (mThirdAns.isChecked()) {
             Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(2));
-            mThirdAns.setChecked(false);
-            countPoint(points);
+            userAnswers.add(points);
         }
         mRadioGroup.clearCheck();
     }
+
     /**
-     * Добавляет определённым ячейкам pointGroup 1 балл
+     * Получаем массив int[8], индекс - номер группы, его значение - баллы у группы
+     * Проходимся по userAnswers с помощью foreach
      */
-    private void countPoint(Integer[] points) {
-        for (int i = 0; i < points.length; i++){
-            if (pointsGroup[points[i]] == null) pointsGroup[points[i]] = 1;
-            else pointsGroup[points[i]]++;
+    public int[] getPointFromArray(){
+        int[] point = new int[8];
+        for (Integer[] i : userAnswers) {
+            for (Integer j: i){
+                if (point[j] == 0) point[j]=1;
+                else point[j]++;
+            }
         }
+        return point;
     }
 
     /**
@@ -133,6 +139,21 @@ public class Question1 extends AppCompatActivity {
      */
     private boolean checkButtons(){
         return mFirstAns.isChecked() || mSecondAns.isChecked() || mThirdAns.isChecked();
+    }
+
+    /**
+     * Запускаем для (questionNumber - 2) метод nextQuest() - получаем предыдущий вопрос
+     * Удаляем из массива баллы, которые юзер получил за предыдущий вопрос
+     */
+    public void backQuest(View view){
+        if (questionNumber != 1)
+        {
+            mRadioGroup.clearCheck();
+            questionNumber -= 2;
+            userAnswers.remove(userAnswers.size() - 1);
+            isPreviousQue = true;
+            nextQuest(view);
+        }
     }
 
 
