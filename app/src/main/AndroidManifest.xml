@@ -8,7 +8,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
+        <activity
+            android:name=".MainActivity"
             android:label="MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,13 +17,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.testicst.Intro"
+        <activity
+            android:name=".Intro"
             android:label="@string/app_intro" />
-        <activity android:name="com.example.testicst.Handbook"
+        <activity
+            android:name=".Handbook"
             android:label="@string/hand_book" />
-        <activity android:name="com.example.testicst.Question1"
+        <activity
+            android:name=".Question1"
             android:label="quest1" />
-
+        <activity
+            android:name=".TestResults"
+            android:label="@string/resultText" />
     </application>
 
 </manifest>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Test ICST</string>
     <string name="map">Test ICST</string>
@@ -10,7 +11,7 @@
     <string name="Exam">"ЕГЭ"</string>
     <string name="Points">"Проходной балл 2019 года:"</string>
     <string name="Places">"Количество бюджетных мест в 2020:"</string>
- <string name="Group1">
+    <string name="Group1">
         "Проектирование, разработка, тестирование и сопровождение сложных программных продуктов"
     </string>
     <string name="Group1_description">
@@ -142,7 +143,6 @@ WEB-Дизайнер;
         "Программная инженерия 09.03.04"
     </string>
 
-
     <string name="Group8">
         "Инноватика и управление качеством"
     </string>
@@ -162,6 +162,8 @@ WEB-Дизайнер;
     <string name="intro_forth_title">Go to ICST!</string>
     <string name="intro_forth_description">something about ICST</string>
     <string name="but_start_test">Пройти тест</string>
+
+    <string name="counterW">/20</string>
 
     <string name="counter1">1/20</string>
     <string name="quest1">Выбери проект, в разработке которого ты бы хотел
@@ -257,5 +259,10 @@ WEB-Дизайнер;
     <string name="quest20">При решении задач мне больше нравится</string>
     <string name="quest20ans1">подходить к решению творчески</string>
     <string name="quest20ans2">мыслить креативно и искать нестандартные решения</string>
+    <string name="findOutMore">Узнать подробнее</string>
+    <string name="resultText">Результат</string>
+    <string name="weRecommend">Мы рекомендуем вам направление</string>
+    <string name="startAgain">Пройти заново</string>
+    <string name="backToMenu">Вернуться в меню</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.testicst;
+package com.example.testicst.intro;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,11 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
-public class FragmentIntroForth extends Fragment {
+import com.example.testicst.R;
+
+public class FragmentIntroSecond extends Fragment {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.fragment_intro_forth, container, false);
+        return inflater.inflate(R.layout.fragment_intro_second, container, false);
     }
 }

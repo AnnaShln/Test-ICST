@@ -1,5 +1,9 @@
 package com.example.testicst;
 
+import com.example.testicst.intro.FragmentIntroFirst;
+import com.example.testicst.intro.FragmentIntroForth;
+import com.example.testicst.intro.FragmentIntroSecond;
+import com.example.testicst.intro.FragmentIntroThird;
 import com.github.paolorotolo.appintro.AppIntro2;
 
 import android.content.Intent;
