@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new Handbook();
                             break;
                         case R.id.nav_about:
-                            selectedFragment = new FragmentTest();
+                            selectedFragment = new FragmentTestResult();
                             break;
                     }
 
