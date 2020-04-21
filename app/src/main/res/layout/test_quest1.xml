@@ -54,37 +54,39 @@
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/ic_appintro_navigate_before_white" />
 
-    <RadioGroup
-        android:id="@+id/answerOptions"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/next_quest"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quest1">
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/quest1_ans1"
             style="@style/RadioButtons"
+            android:onClick="setOnlyOneAns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quest1ans1" />
+            android:text="@string/quest1ans3" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/quest1_ans2"
             style="@style/RadioButtons"
+            android:onClick="setOnlyOneAns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/quest1ans2" />
 
-        <RadioButton
+        <CheckBox
             android:id="@+id/quest1_ans3"
-            android:text="@string/quest1ans3"
             style="@style/RadioButtons"
+            android:onClick="setOnlyOneAns"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </RadioGroup>
-
+            android:layout_height="wrap_content"
+            android:text="@string/quest1ans1" />
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

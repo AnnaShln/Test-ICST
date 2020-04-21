@@ -35,7 +35,7 @@ public class TestResults extends AppCompatActivity {
     /**
      * Возвращает названия группы, которую мы рекомендуем
      */
-    private String getGroupFromPoints(int[] points) {
+    public String getGroupFromPoints(int[] points) {
         int max = points[0];
         int maxIndex = 0;
         //Находим группу с максимальным баллом (из равных выбирается первый)

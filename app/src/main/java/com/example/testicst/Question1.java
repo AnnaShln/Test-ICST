@@ -5,6 +5,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -22,9 +23,9 @@ public class Question1 extends AppCompatActivity {
     ImageButton mNext;
     TextView mCounter;
     TextView mQuestion;
-    RadioButton mFirstAns;
-    RadioButton mSecondAns;
-    RadioButton mThirdAns;
+    CheckBox mFirstAns;
+    CheckBox mSecondAns;
+    CheckBox mThirdAns;
     ImageButton mPreviousQue;
     int questionNumber; //номер вопроса
     QuestionsDbHelper dbHelper;
@@ -49,7 +50,6 @@ public class Question1 extends AppCompatActivity {
         mFirstAns = findViewById(R.id.quest1_ans1);
         mSecondAns = findViewById(R.id.quest1_ans2);
         mThirdAns = findViewById(R.id.quest1_ans3);
-        mRadioGroup = findViewById(R.id.answerOptions);
         mPreviousQue = findViewById(R.id.back_quest);
         //получаем ссылку на базу данных
         dbHelper = new QuestionsDbHelper(this);
@@ -107,16 +107,17 @@ public class Question1 extends AppCompatActivity {
             userAnswers.add(points);
         }
 
-        else if (mSecondAns.isChecked()) {
+        if (mSecondAns.isChecked()) {
             Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(1));
             userAnswers.add(points);
         }
 
-        else if (mThirdAns.isChecked()) {
+        if (mThirdAns.isChecked()) {
             Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(2));
             userAnswers.add(points);
         }
-        mRadioGroup.clearCheck();
+
+        allUnCheck();
     }
 
     /**
@@ -142,17 +143,49 @@ public class Question1 extends AppCompatActivity {
     }
 
     /**
+     * Снимаем со всех checkBox
+     */
+    private void allUnCheck(){
+        mFirstAns.setChecked(false); mSecondAns.setChecked(false); mThirdAns.setChecked(false);
+    }
+
+    /**
      * Запускаем для (questionNumber - 2) метод nextQuest() - получаем предыдущий вопрос
      * Удаляем из массива баллы, которые юзер получил за предыдущий вопрос
      */
     public void backQuest(View view){
         if (questionNumber != 1)
         {
-            mRadioGroup.clearCheck();
+            allUnCheck();
             questionNumber -= 2;
             userAnswers.remove(userAnswers.size() - 1);
             isPreviousQue = true;
             nextQuest(view);
+        }
+    }
+
+    /**
+     * Если номер вопроса не 16, то выбираем только 1 ответ
+     */
+    public void setOnlyOneAns(View view){
+        //Номер вопросов с множественными ответами, если будут больше, чем 1
+        //обновлю базу данных, добавив к сущности Question: boolean isMultiplyAns
+        if (questionNumber != 16) {
+            int k = view.getId();
+            switch (k) {
+                case R.id.quest1_ans1:
+                    mSecondAns.setChecked(false);
+                    mThirdAns.setChecked(false);
+                    break;
+                case R.id.quest1_ans2:
+                    mFirstAns.setChecked(false);
+                    mThirdAns.setChecked(false);
+                    break;
+                case R.id.quest1_ans3:
+                    mFirstAns.setChecked(false);
+                    mSecondAns.setChecked(false);
+                    break;
+            }
         }
     }
 
