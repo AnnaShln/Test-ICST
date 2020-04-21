@@ -162,5 +162,8 @@ public class MainActivity extends AppCompatActivity {
         dbHelper.addQuestion(new Question(getString(R.string.quest20), 20,
                 getString(R.string.quest20ans1), getString(R.string.quest20ans2),
                 "", "4", "3", ""));
+        dbHelper.addQuestion(new Question(getString(R.string.quest21), 21,
+                getString(R.string.quest21ans1), getString(R.string.quest21ans2),
+                "", "246", "37", ""));
     }
 }

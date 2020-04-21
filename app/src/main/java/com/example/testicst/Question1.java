@@ -30,8 +30,7 @@ public class Question1 extends AppCompatActivity {
     int questionNumber; //номер вопроса
     QuestionsDbHelper dbHelper;
     ArrayList<String> allQuestions;
-    RadioGroup mRadioGroup;
-    static final int valueQuestions = 20; //Количество вопросов
+    int valueQuestions; //Количество вопросов
     boolean isPreviousQue = false; //Нужно для нажатии кнопки "Назад"
 
     /**
@@ -56,6 +55,7 @@ public class Question1 extends AppCompatActivity {
         //получаем все вопросы, содержащихся в БД
         allQuestions = dbHelper.getAllQuestions();
         questionNumber = 1; //Начинаем с первого вопроса
+        valueQuestions = allQuestions.size();
     }
 
     /**
@@ -75,7 +75,7 @@ public class Question1 extends AppCompatActivity {
                 else mPreviousQue.setVisibility(View.INVISIBLE);
                 ArrayList<String> answers = dbHelper.getAnswersOnQue(questionNumber); //Все ответы на вопрос
                 //Счётчик в xml, тут что-то подчёркивается, если знаете как исправить, исправьте плз
-                mCounter.setText(Integer.toString(questionNumber) + getString(R.string.counterW));
+                mCounter.setText(Integer.toString(questionNumber) + "/" + Integer.toString(valueQuestions));
                 //Выбираем из массива некс вопрос(нумерация в массиве идёт с 0)
                 mQuestion.setText(allQuestions.get(questionNumber - 1));
                 mFirstAns.setText(answers.get(0));

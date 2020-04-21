@@ -165,7 +165,7 @@ WEB-Дизайнер;
 
     <string name="counterW">/20</string>
 
-    <string name="counter1">1/20</string>
+    <string name="counter1">1/21</string>
     <string name="quest1">Выбери проект, в разработке которого ты бы хотел
         поучаствовать</string>
     <string name="quest1ans1">Платформа машинного интеллекта, которая поможет организациям
@@ -248,8 +248,8 @@ WEB-Дизайнер;
     <string name="quest17ans2">Лучше сочетать с устным/письменным планированием</string>
     <string name="counter18">18/20</string>
     <string name="quest18">В работе важнее всего</string>
-    <string name="quest18ans1">сосредоточение на итоговом результате</string>
-    <string name="quest18ans2">исследование сопряженных с работой областей</string>
+    <string name="quest18ans1">Сосредоточение на итоговом результате</string>
+    <string name="quest18ans2">Исследование сопряженных с работой областей</string>
     <string name="counter19">19/20</string>
     <string name="quest19">Если кто-то критикует работу команды, я…</string>
     <string name="quest19ans1">Попрошу тщательное описание спорных моментов</string>
@@ -257,8 +257,11 @@ WEB-Дизайнер;
     <string name="quest19ans3">Разберу спорные моменты сам</string>
     <string name="counter20">20/20</string>
     <string name="quest20">При решении задач мне больше нравится</string>
-    <string name="quest20ans1">подходить к решению творчески</string>
-    <string name="quest20ans2">мыслить креативно и искать нестандартные решения</string>
+    <string name="quest20ans1">Подходить к решению творчески</string>
+    <string name="quest20ans2">Мыслить креативно и искать нестандартные решения</string>
+    <string name="quest21">Результат работы должен</string>
+    <string name="quest21ans1">Иметь практическое использование</string>
+    <string name="quest21ans2">Иметь теоретическое значение (продвижение идеи и т.п.)</string>
     <string name="findOutMore">Узнать подробнее</string>
     <string name="resultText">Результат</string>
     <string name="weRecommend">Мы рекомендуем вам направление</string>
