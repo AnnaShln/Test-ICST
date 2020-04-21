@@ -69,7 +69,7 @@
             android:onClick="setOnlyOneAns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quest1ans3" />
+            android:text="@string/quest1ans1" />
 
         <CheckBox
             android:id="@+id/quest1_ans2"
@@ -85,7 +85,7 @@
             android:onClick="setOnlyOneAns"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/quest1ans1" />
+            android:text="@string/quest1ans3" />
     </LinearLayout>
 
 
