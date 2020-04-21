@@ -11,6 +11,7 @@ import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import com.example.testicst.DB.Question;
 import com.example.testicst.DB.QuestionsDbHelper;
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
         Thread t = new Thread(new Runnable() {
             @Override
-            public void run() {
+            public void run() {                 //эта страшная вещь запускает интро один раз на устройстве
                 SharedPreferences getPrefs = PreferenceManager
                         .getDefaultSharedPreferences(getBaseContext());
 
@@ -58,9 +59,11 @@ public class MainActivity extends AppCompatActivity {
 
         t.start();
 
-        Fragment fragment = new FragmentTest();
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                fragment).commit();
+        Fragment fragment1 = new FragmentTest();
+        Fragment fragment2 = new FragmentTestResult();
+
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
+                fragment1).commit();
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
     }

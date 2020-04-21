@@ -87,7 +87,7 @@ public class Question1 extends AppCompatActivity {
                 } else mThirdAns.setVisibility(View.GONE);
 
             } else {
-                Intent intent = new Intent(this, TestResults.class);
+                Intent intent = new Intent(this, MainActivity.class);
 
                 //отправляем массив баллов
                 intent.putExtra("POINTS", getPointFromArray());
