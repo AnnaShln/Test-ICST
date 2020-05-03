@@ -213,8 +213,8 @@ WEB-Дизайнер;
     <string name="quest9ans3">С данными на серверах</string>
     <string name="counter10">10/20</string>
     <string name="quest10">В работе я предпочитаю…</string>
-    <string name="quest10ans1">концентрировать силы в одном проекте</string>
-    <string name="quest10ans2">решать задачи разного рода</string>
+    <string name="quest10ans1">Концентрировать силы в одном проекте</string>
+    <string name="quest10ans2">Решать задачи разного рода</string>
     <string name="counter11">11/20</string>
     <string name="quest11">В мире IT самое главное</string>
     <string name="quest11ans1">Следить за новыми и перспективными проектами</string>
