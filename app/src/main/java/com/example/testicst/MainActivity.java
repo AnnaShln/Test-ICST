@@ -21,11 +21,29 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
+    final static String SAVED_RESULTS =  "idDirection";
+    int idDirection;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        Intent intent = getIntent();
+        int id = intent.getIntExtra(SAVED_RESULTS, -1);
+        if (id != -1) {
+            SharedPreferences sPref;
+            sPref = getPreferences(MODE_PRIVATE);
+            SharedPreferences.Editor ed = sPref.edit();
+            ed.putInt(MainActivity.SAVED_RESULTS, id);
+            ed.commit();
+            idDirection = id;
+        }
+        else {
+            SharedPreferences sPref;
+            sPref = getPreferences(MODE_PRIVATE);
+            idDirection = sPref.getInt(SAVED_RESULTS, -1);
+        }
 
         Thread t = new Thread(new Runnable() {
             @Override
@@ -58,9 +76,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         t.start();
-
         Fragment fragment1 = new FragmentTest();
-        Fragment fragment2 = new FragmentTestResult();
+        if (idDirection != -1) {
+            fragment1 = new FragmentTestResult();
+        }
 
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container,
                 fragment1).commit();
@@ -76,7 +95,11 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.nav_test:
-                            selectedFragment = new FragmentTest();
+                            if (idDirection == -1) {
+                                selectedFragment = new FragmentTest();
+                            }
+                            else
+                                selectedFragment = new FragmentTestResult();
                             break;
                         case R.id.nav_book:
                             selectedFragment = new Handbook();

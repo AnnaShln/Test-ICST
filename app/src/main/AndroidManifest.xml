@@ -26,9 +26,6 @@
         <activity
             android:name=".Question1"
             android:label="quest1" />
-        <activity
-            android:name=".TestResults"
-            android:label="@string/resultText" />
     </application>
 
 </manifest>

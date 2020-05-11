@@ -1,6 +1,7 @@
 package com.example.testicst;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +12,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import static android.content.Context.MODE_PRIVATE;
 
 public class FragmentTestResult extends Fragment {
 
@@ -30,31 +33,17 @@ public class FragmentTestResult extends Fragment {
             }
         });
 
+        SharedPreferences sPref;
+        sPref = getActivity().getPreferences(MODE_PRIVATE);
+        int idDirection = sPref.getInt(MainActivity.SAVED_RESULTS,  1);
+
         mGroup = view.findViewById(R.id.results_group);
 
-        Intent intent = getActivity().getIntent();
-        //Получаем баллы с теста
-        points = intent.getIntArrayExtra("POINTS");
-
-        String recommendedGroup = getGroupFromPoints(points);
+        String recommendedGroup = getStringResourceByName("Group" + Integer.toString(idDirection));
 
         mGroup.setText(recommendedGroup);
 
         return view;
-    }
-
-    private String getGroupFromPoints(int[] points) {
-        int max = points[0];
-        int maxIndex = 0;
-        //Находим группу с максимальным баллом (из равных выбирается первый)
-        for (int i = 1; i < points.length; i++){
-            if (points[i] > max) {
-                max = points[i];
-                maxIndex = i;
-            }
-        }
-
-        return getStringResourceByName("Group" + Integer.toString(maxIndex + 1));
     }
 
     public String getStringResourceByName(String aString) {

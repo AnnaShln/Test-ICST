@@ -1,6 +1,7 @@
 package com.example.testicst;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -89,11 +90,9 @@ public class Question1 extends AppCompatActivity {
             } else {
                 Intent intent = new Intent(this, MainActivity.class);
 
-                //отправляем массив баллов
-                intent.putExtra("POINTS", getPointFromArray());
+                intent.putExtra(MainActivity.SAVED_RESULTS, getIdDirection(getPointFromArray()));
 
                 startActivity(intent);
-
                 finish();
             }
         }
@@ -187,6 +186,19 @@ public class Question1 extends AppCompatActivity {
                     break;
             }
         }
+    }
+
+    private int getIdDirection(int[] points) {
+        int max = points[0];
+        int maxIndex = 0;
+        //Находим группу с максимальным баллом (из равных выбирается первый)
+        for (int i = 1; i < points.length; i++){
+            if (points[i] > max) {
+                max = points[i];
+                maxIndex = i;
+            }
+        }
+        return (maxIndex + 1);
     }
 
 
