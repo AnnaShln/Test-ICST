@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Test ICST</string>
+    <string name="app_name">Test ICST</string>а
     <string name="map">Test ICST</string>
     <string name="dial">Test ICST</string>
     <string name="mail">Test ICST</string>
     <string name="testImage">just an image</string>
-    <string name="app_intro">intro</string>
+    <string name="app_intro">Абитуриент ИКНТ</string>
     <string name="test_image">testing text</string>
     <string name="Professions">"Будущие професии"</string>
     <string name="Exam">"ЕГЭ"</string>
@@ -429,5 +429,10 @@ Data Science: направление в IT, предназначенное
     <string name="backToMenu">Вернуться в меню</string>
     <string name="results_branches">Тут будет специальность Тут будет специальность
     Тут будет специальность Тут будет специальность Тут будет специальность</string>
+    <string name="info">Тут будет информация Тут будет информация Тут будет информация
+        Тут будет информация Тут будет информация Тут будет информация
+    Тут будет информация Тут будет информация Тут будет информация Тут будет информация
+    Тут будет информация Тут будет информация Тут будет информация Тут будет информация
+    Тут будет информация Тут будет информация Тут будет информация Тут будет информация</string>
 
 </resources>

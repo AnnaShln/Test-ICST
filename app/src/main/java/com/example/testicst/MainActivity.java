@@ -9,15 +9,10 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.MenuItem;
-import android.widget.Button;
-
 import com.example.testicst.DB.Question;
 import com.example.testicst.DB.QuestionsDbHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -76,6 +71,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         t.start();
+
         Fragment fragment1 = new FragmentTest();
         if (idDirection != -1) {
             fragment1 = new FragmentTestResult();
@@ -105,7 +101,7 @@ public class MainActivity extends AppCompatActivity {
                             selectedFragment = new Handbook();
                             break;
                         case R.id.nav_about:
-                            selectedFragment = new FragmentTestResult();
+                            selectedFragment = new FragmentInfo();
                             break;
                     }
 

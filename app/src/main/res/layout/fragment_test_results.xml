@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cat" />
+        app:srcCompat="@drawable/test_results" />
 
     <TextView
         android:id="@+id/results_weRecommend"
@@ -73,11 +73,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:background="@drawable/answers_style"
         android:paddingLeft="30dp"
-        android:paddingRight="30dp"
         android:paddingTop="15dp"
+        android:paddingRight="30dp"
         android:paddingBottom="15dp"
         android:text="Пройти заново"
         android:textAllCaps="false"
