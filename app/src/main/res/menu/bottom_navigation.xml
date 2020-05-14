@@ -6,18 +6,17 @@
         android:icon="@drawable/test"
         android:enabled="true"
         android:checked="true"
-        android:title="Тест"/>
+        android:title=""/>
     <item
         android:id="@+id/nav_book"
         android:icon="@drawable/spravochnik"
         android:enabled="true"
-        android:title="Справочник"/>
+        android:title=""/>
 
     <item
         android:id="@+id/nav_about"
         android:icon="@drawable/info"
         android:enabled="true"
-        android:title="Об ИКНТ"/>
-
+        android:title=""/>
 
 </menu>

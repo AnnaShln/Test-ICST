@@ -19,15 +19,15 @@
 
     <Button
         android:id="@+id/button_start_test"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
+        android:layout_width="211dp"
+        android:layout_height="57dp"
         android:layout_below="@+id/start_test_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="10dp"
         android:background="@drawable/button_style"
         android:text="@string/but_start_test"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textSize="26sp"
+        android:textSize="24sp"
         app:layout_constraintTop_toBottomOf="@+id/start_test_image" />
 </RelativeLayout>
