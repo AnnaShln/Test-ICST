@@ -13,6 +13,31 @@
     <string name="Places">"Количество бюджетных мест в 2020:"</string>
         <string name="Exam_MIR">"МИР"</string>
         <string name="Exam_MFR">"МФР"</string>
+    <string name="Group1_name1_places">24</string>
+    <string name="Group1_name2_places">36</string>
+    <string name="Group1_name3_places">80</string>
+    <string name="Group1_name4_places">36</string>
+    <string name="Group1_name5_places">80</string>
+    <string name="Group2_name1_places">80</string>
+    <string name="Group2_name2_places">36</string>
+    <string name="Group2_name3_places">48</string>
+    <string name="Group3_name1_places">24</string>
+    <string name="Group3_name2_places">36</string>
+    <string name="Group3_name3_places">24</string>
+    <string name="Group3_name4_places">24</string>
+    <string name="Group4_name1_places">24</string>
+    <string name="Group4_name2_places">80</string>
+    <string name="Group4_name3_places">36</string>
+    <string name="Group4_name4_places">80</string>
+    <string name="Group4_name5_places">48</string>
+    <string name="Group5_name1_places">48</string>
+    <string name="Group5_name2_places">24</string>
+    <string name="Group6_name1_places">80</string>
+    <string name="Group7_name1_places">36</string>
+    <string name="Group7_name2_places">24</string>
+    <string name="Group7_name3_places">80</string>
+    <string name="Group8_name1_places">20</string>
+    <string name="Group8_name2_places">24</string>
     <string name="Group1">
         "Проектирование, разработка, тестирование и сопровождение сложных программных продуктов"
     </string>
@@ -49,6 +74,7 @@ WEB-Дизайнер;
 Разработчик БД"
     </string>
     <string name="Group1_salary">50-70 тыс. руб.</string>
+
 
     <string name="Group1_name1">
         "Фундаментальная информатика и информационные технологии 02.03.02"
