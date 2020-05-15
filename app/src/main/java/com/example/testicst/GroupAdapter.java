@@ -32,14 +32,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
 
         Group Group = GroupList.get(position);
         holder.TextView_title.setText(Group.getTitle());
-        holder.TextView_description.setText(Group.getDescription());
-        holder.TextView_professions_f.setText(Group.getProfessions());
-
-
-        boolean isExpanded = GroupList.get(position).isExpanded();
-        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
-
-    }
+   }
 
     @Override
     public int getItemCount() {
@@ -51,15 +44,15 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
         private static final String TAG = "GroupVH";
 
         ConstraintLayout expandableLayout;
-        TextView TextView_title, TextView_description, TextView_professions_f;
+        TextView TextView_title;
 
         public GroupVH(@NonNull final View itemView) {
             super(itemView);
 
             TextView_title = itemView.findViewById(R.id.TextView_title);
-            TextView_description = itemView.findViewById(R.id.TextView_description);
+          /*  TextView_description = itemView.findViewById(R.id.TextView_description);
             TextView_professions_f= itemView.findViewById(R.id.TextView_professions_f);
-            expandableLayout = itemView.findViewById(R.id.constraintLayout);
+            expandableLayout = itemView.findViewById(R.id.constraintLayout);*/
 
 
             TextView_title.setOnClickListener(new View.OnClickListener() {
