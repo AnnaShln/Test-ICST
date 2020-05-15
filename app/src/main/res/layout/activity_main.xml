@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.testicst.MainActivity">
+    tools:context="com.example.testicst.MainActivity"
+    android:background="@color/white">
     
     <FrameLayout
         android:id="@+id/fragment_container"
@@ -17,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:itemIconSize="40dp"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:layout_alignParentBottom="true"
         android:background="@color/lightGrey"
         app:itemIconTint="@drawable/change_icon_colors"
