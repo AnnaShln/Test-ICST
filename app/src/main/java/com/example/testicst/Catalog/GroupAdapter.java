@@ -1,5 +1,7 @@
 package com.example.testicst.Catalog;
 
+import android.content.Context;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
@@ -20,7 +23,8 @@ import java.util.List;
 public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
 
     FragmentManager myFragmentManager;
-    private static final String TAG = "GroupAdapter";
+    Context mContext;
+    public static final String TAG = "GroupAdapter";
     List<Group> GroupList;
 
     public GroupAdapter(List<Group> groupList) {
@@ -31,25 +35,14 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
     @Override
     public GroupVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.handbook_list_of_groups, parent, false);
+        mContext = parent.getContext();
         return new GroupVH(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull GroupVH holder, int position) {
-
-        Group Group = GroupList.get(position);
-        holder.TextView_title.setText(Group.getTitle());
-
-        holder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                /*myFragmentManager = getFragmentManager();
-                FragmentTransaction fragmentTransaction = myFragmentManager
-                        .beginTransaction();
-                fragmentTransaction.add(R.id.container, SpecialityList);
-                fragmentTransaction.commit();*/
-            }
-        });
+        Group group = GroupList.get(position);
+        holder.bindTo(group);
     }
 
     @Override
@@ -57,9 +50,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
         return GroupList.size();
     }
 
-    class GroupVH extends RecyclerView.ViewHolder {
-
-        private static final String TAG = "GroupVH";
+    class GroupVH extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         TextView TextView_title;
 
@@ -67,14 +58,23 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
             super(itemView);
 
             TextView_title = itemView.findViewById(R.id.TextView_title);
-            TextView_title.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+            itemView.setOnClickListener(this);
+        }
 
-                    //   Group Group = GroupList.get(getAdapterPosition());
+        void bindTo(Group currentGroup){
+            TextView_title.setText(currentGroup.title);
+        }
 
-                }
-            });
+        @Override
+        public void onClick(View v) {
+            SpecialityList fragment = new SpecialityList();
+            Bundle bundle = new Bundle();
+            bundle.putInt(TAG, GroupList.get(getAdapterPosition()).id);
+            fragment.setArguments(bundle);
+
+            ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction()
+                    .replace(R.id.fragment_container, fragment)
+                    .commit();
         }
     }
 }

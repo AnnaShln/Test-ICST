@@ -37,21 +37,37 @@ public class Handbook extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         initData();
         initRecyclerView();
+
+
         return rootView;
     }
 
-
-
     private void initData(){
         groupList = new ArrayList<>();
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
-        groupList.add(new Group(getString(R.string.Group1),getString(R.string.Group1_description), getString(R.string.Group1_professions), getString(R.string.Group1_salary)));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 1));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 2));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 3));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 4));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 5));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 6));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 7));
+        groupList.add(new Group(getString(R.string.Group1),
+                getString(R.string.Group1_description),
+                getString(R.string.Group1_professions), getString(R.string.Group1_salary), 8));
 
         /*groupList.add(new Group(getString(R.string.Group2)));
         groupList.add(new Group(getString(R.string.Group3)));

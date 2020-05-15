@@ -1,4 +1,5 @@
 package com.example.testicst.Catalog;
+
 public class Speciality extends Group{
     String name;
     String exams;
@@ -7,9 +8,10 @@ public class Speciality extends Group{
     private boolean isfirst;
     private boolean expanded;
 
-    public Speciality (String title,String description, String professions, String salary, String name, String exams, String points, String places)
+    public Speciality (String title,String description, String professions, String salary,
+                       String name, String exams, String points, String places, int idDirection)
     {
-        super(title, description, professions, salary);
+        super(title, description, professions, salary, idDirection);
         this.name = name;
         this.exams = exams;
         this.places = places;
@@ -17,9 +19,9 @@ public class Speciality extends Group{
         this.expanded = false;
         this.isfirst = true;
     }
-    public Speciality (String title,  String name, String exams, String points, String places)
+    public Speciality (String title,  String name, String exams, String points, String places, int idDirection)
     {
-        super(title, "false","false","false");
+        super(title, "false","false","false", idDirection);
         this.name = name;
         this.exams = exams;
         this.places = places;

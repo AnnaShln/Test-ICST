@@ -10,6 +10,8 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.MenuItem;
+
+import com.example.testicst.Catalog.Handbook;
 import com.example.testicst.DB.Question;
 import com.example.testicst.DB.QuestionsDbHelper;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -91,11 +93,11 @@ public class MainActivity extends AppCompatActivity {
 
                     switch (item.getItemId()) {
                         case R.id.nav_test:
-                            if (idDirection == -1) {
-                                selectedFragment = new FragmentTest();
+                            if (idDirection != -1) {
+                                selectedFragment = new FragmentTestResult();
                             }
                             else
-                                selectedFragment = new FragmentTestResult();
+                                selectedFragment = new FragmentTest();
                             break;
                         case R.id.nav_book:
                             selectedFragment = new Handbook();
