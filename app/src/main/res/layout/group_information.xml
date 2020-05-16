@@ -31,15 +31,15 @@
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="?attr/selectableItemBackground"
-        android:fontFamily="@font/heebo"
+        android:layout_height="10dp"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:fontFamily="@font/heebo"
         android:padding="1dp"
-        android:textSize="14sp"
         android:text="@string/Group1_description"
-        android:textColor="@color/greyForAns"
+        android:textColor="#808080"
+        android:textSize="16sp"
         android:visibility="visible"
         tools:ignore="MissingConstraints" />
 
@@ -53,7 +53,7 @@
         android:text="@string/Professions"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/color_subtitle"
-        android:textSize="14sp"
+        android:textSize="16sp"
         android:visibility="visible" />
 
     <TextView
@@ -65,9 +65,8 @@
         android:fontFamily="@font/heebo"
         android:padding="1dp"
         android:text="@string/Group1_professions"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="@color/greyForAns"
-        android:textSize="14sp"
+        android:textColor="@color/grey1"
+        android:textSize="16sp"
         android:visibility="visible"
         tools:ignore="MissingConstraints" />
 
@@ -79,7 +78,6 @@
         android:text="@string/Salary"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/color_subtitle"
         android:textSize="16sp"
         android:visibility="visible" />
@@ -102,7 +100,8 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="1dp">
+        android:padding="1dp"
+        app:contentPaddingBottom="5dp">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -181,15 +180,14 @@
                     android:layout_marginStart="16dp"
                     android:layout_marginLeft="16dp"
                     android:layout_marginTop="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
                     android:text="@string/Places"
                     android:textAppearance="@style/TextAppearance.AppCompat.Small"
                     android:textColor="@color/darkestGrey"
                     android:textSize="16sp"
-                    app:layout_constraintStart_toEndOf="@+id/textView2"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView" />
+                    app:layout_constraintTop_toBottomOf="@+id/pointsTextView"
+                    tools:ignore="MissingConstraints" />
 
                 <TextView
                     android:id="@+id/textView3"

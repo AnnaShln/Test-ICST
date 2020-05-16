@@ -12,7 +12,7 @@
         android:padding="2dp"
         android:theme="@style/AppTheme"
         app:cardCornerRadius="2dp"
-        app:cardElevation="5dp"
+        app:cardElevation="2dp"
         app:cardPreventCornerOverlap="false"
         app:cardUseCompatPadding="false">
 
@@ -20,6 +20,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:clipToPadding="true"
+
             android:theme="@style/AppTheme">
 
             <TextView
