@@ -23,6 +23,8 @@
         android:background="@color/lightGrey"
         app:itemIconTint="@drawable/change_icon_colors"
         app:itemTextColor="@drawable/change_icon_colors"
+        app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_navigation" />
+
 
 </RelativeLayout>
