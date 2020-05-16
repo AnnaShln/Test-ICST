@@ -20,6 +20,10 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="0dp"
         android:background="@color/lightGrey"
+        android:paddingLeft="5dp"
+        android:paddingTop="10dp"
+        android:paddingRight="5dp"
+        android:paddingBottom="5dp"
         android:text="@string/Group1"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -41,6 +45,8 @@
         android:text="@string/Group1_description"
         android:textColor="#808080"
         android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:visibility="visible"
         tools:ignore="MissingConstraints" />
 
@@ -55,6 +61,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/color_subtitle"
         android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:visibility="visible" />
 
     <TextView
@@ -69,6 +77,8 @@
         android:textColor="@color/grey1"
         android:textSize="16sp"
         android:visibility="visible"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -81,6 +91,8 @@
         android:layout_marginTop="8dp"
         android:textColor="@color/color_subtitle"
         android:textSize="16sp"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
         android:visibility="visible" />
 
     <TextView
