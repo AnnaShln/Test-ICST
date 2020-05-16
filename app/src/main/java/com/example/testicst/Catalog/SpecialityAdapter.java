@@ -6,9 +6,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.testicst.R;
-
 import java.util.List;
 public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.SpecialityVH> {
 
@@ -25,6 +23,7 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.group_information, parent, false);
         return new SpecialityVH(view);
     }
+
 
     @Override
     public void onBindViewHolder(@NonNull  SpecialityVH holder, int position) {
@@ -61,6 +60,9 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
 
     }
 
+
+
+
     @Override
     public int getItemCount() {
         return specialityList.size();
@@ -71,7 +73,8 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         private static final String TAG = "SpecialityVH";
 
         ConstraintLayout expandableLayout;
-        TextView nameTextView, examsTextView, pointsTextView, placesTextView, descriptionTextView, professionsTextView, salaryTextView, titleTextView, textView6,textView7 ;
+        TextView nameTextView, examsTextView, pointsTextView, placesTextView, descriptionTextView,
+                professionsTextView, salaryTextView, titleTextView, textView6,textView7 ;
 
         public SpecialityVH(@NonNull final View itemView) {
             super(itemView);

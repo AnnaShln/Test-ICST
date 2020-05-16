@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+
 import com.example.testicst.R;
 
 import java.util.ArrayList;
@@ -21,6 +22,7 @@ public class SpecialityList extends Fragment {
     RecyclerView recyclerView;
     List<Speciality> specialityList = new ArrayList<>();
     int idDirection;
+
 
     @Nullable
     @Override
@@ -49,6 +51,7 @@ public class SpecialityList extends Fragment {
         SpecialityAdapter specialityAdapter = new SpecialityAdapter(specialityList);
         recyclerView.setAdapter(specialityAdapter);
     }
+
 
     private void initData(int idDirection)
     {

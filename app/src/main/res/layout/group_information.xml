@@ -20,9 +20,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginTop="0dp"
         android:background="@color/lightGrey"
-        android:paddingLeft="5dp"
+        android:paddingLeft="16dp"
         android:paddingTop="10dp"
-        android:paddingRight="5dp"
+        android:paddingRight="16dp"
         android:paddingBottom="5dp"
         android:text="@string/Group1"
         android:textAllCaps="false"
@@ -38,15 +38,15 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginRight="8dp"
+        android:layout_marginRight="16dp"
         android:background="?attr/selectableItemBackground"
         android:fontFamily="@font/heebo"
         android:padding="1dp"
         android:text="@string/Group1_description"
-        android:textColor="#808080"
+        android:textColor="@color/greyForAns"
         android:textSize="16sp"
-        android:paddingLeft="5dp"
-        android:paddingRight="5dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
         android:visibility="visible"
         tools:ignore="MissingConstraints" />
 
@@ -55,13 +55,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/heebo"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="8dp"
         android:text="@string/Professions"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@color/color_subtitle"
         android:textSize="16sp"
-        android:paddingLeft="5dp"
+        android:paddingLeft="8dp"
         android:paddingRight="5dp"
         android:visibility="visible" />
 
@@ -77,7 +77,7 @@
         android:textColor="@color/grey1"
         android:textSize="16sp"
         android:visibility="visible"
-        android:paddingLeft="5dp"
+        android:paddingLeft="8dp"
         android:paddingRight="5dp"
         tools:ignore="MissingConstraints" />
 
@@ -87,11 +87,11 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/heebo"
         android:text="@string/Salary"
-        android:layout_marginLeft="8dp"
+        android:layout_marginLeft="0dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/color_subtitle"
         android:textSize="16sp"
-        android:paddingLeft="5dp"
+        android:paddingLeft="8dp"
         android:paddingRight="5dp"
         android:visibility="visible" />
 
@@ -107,6 +107,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/greyForAns"
         android:textSize="16sp"
+        android:paddingLeft="8dp"
         android:visibility="visible"
         tools:ignore="MissingConstraints" />
 
