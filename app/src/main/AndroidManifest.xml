@@ -28,6 +28,10 @@
         <activity
             android:name=".Question1"
             android:label="Тест"/>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

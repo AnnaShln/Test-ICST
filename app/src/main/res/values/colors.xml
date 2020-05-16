@@ -8,5 +8,6 @@
     <color name="lightGrey">#F4F4F4</color>
     <color name="darkestGrey">#7b7b7b</color>
     <color name="greyForAns">#b4b4b4</color>
+    <color name="grey1">#a9a9a9</color>
     <color name="white">#FFFFFF</color>
 </resources>

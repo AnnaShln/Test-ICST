@@ -34,8 +34,6 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         holder.examsTextView.setText(speciality.getExams());
         holder.pointsTextView.setText(speciality.getPoints());
         holder.placesTextView.setText(speciality.getPlaces());
-     /*   holder.salaryTextView.setText(speciality.getSalary());
-        holder.placesTextView.setText(speciality.getPlaces());*/
         if (speciality.getDescription() != "false")
         {
             holder.descriptionTextView.setVisibility(View.VISIBLE);
@@ -43,9 +41,11 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
             holder.professionsTextView.setVisibility(View.VISIBLE);
             holder.textView6.setVisibility(View.VISIBLE);
             holder.textView7.setVisibility(View.VISIBLE);
+            holder.titleTextView.setVisibility(View.VISIBLE);
             holder.descriptionTextView.setText(speciality.getDescription());
             holder.salaryTextView.setText(speciality.getSalary());
             holder.professionsTextView.setText(speciality.getProfessions());
+            holder.titleTextView.setText(speciality.getTitle());
         }
         else
         {
@@ -54,6 +54,7 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
             holder.professionsTextView.setVisibility(View.GONE);
             holder.textView6.setVisibility(View.GONE);
             holder.textView7.setVisibility(View.GONE);
+            holder.titleTextView.setVisibility(View.GONE);
         }
         boolean isExpanded = specialityList.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
@@ -70,19 +71,19 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         private static final String TAG = "SpecialityVH";
 
         ConstraintLayout expandableLayout;
-        TextView nameTextView, examsTextView, pointsTextView, placesTextView, descriptionTextView, professionsTextView, salaryTextView, textProfessions,textSalary,textView6,textView7 ;
+        TextView nameTextView, examsTextView, pointsTextView, placesTextView, descriptionTextView, professionsTextView, salaryTextView, titleTextView, textView6,textView7 ;
 
         public SpecialityVH(@NonNull final View itemView) {
             super(itemView);
-
+            titleTextView = itemView.findViewById(R.id.titleTextView);
             textView6 = itemView.findViewById(R.id.textView6);
             textView7= itemView.findViewById(R.id.textView7);
             salaryTextView = itemView.findViewById(R.id.salaryTextView);
             professionsTextView = itemView.findViewById(R.id.professionsTextView);
             nameTextView = itemView.findViewById(R.id.nameTextView);
-            examsTextView = itemView.findViewById(R.id.pointsTextView);
-            pointsTextView = itemView.findViewById(R.id.placesTextView);
-            placesTextView = itemView.findViewById(R.id.examsTextView);
+            examsTextView = itemView.findViewById(R.id.examsTextView);
+            pointsTextView = itemView.findViewById(R.id.pointsTextView);
+            placesTextView = itemView.findViewById(R.id.placesTextView);
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
             nameTextView.setOnClickListener(new View.OnClickListener() {
