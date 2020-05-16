@@ -334,14 +334,6 @@ Data Science: направление в IT, предназначенное
     </string>
     <string name="Group8_name2_points">247</string>
     <string name="hand_book">handbook</string>
-    <string name="intro_first_title">Welcome!</string>
-    <string name="intro_first_description">something about our app</string>
-    <string name="intro_second_title">Pass the test!</string>
-    <string name="intro_second_description">test description and profit</string>
-    <string name="intro_third_title">Read the book!</string>
-    <string name="intro_third_description">what you can find in the book</string>
-    <string name="intro_forth_title">Go to ICST!</string>
-    <string name="intro_forth_description">something about ICST</string>
     <string name="but_start_test">Пройти тест</string>
 
     <string name="counterW">/20</string>
@@ -455,5 +447,17 @@ Data Science: направление в IT, предназначенное
     Тут будет информация Тут будет информация Тут будет информация Тут будет информация
     Тут будет информация Тут будет информация Тут будет информация Тут будет информация
     Тут будет информация Тут будет информация Тут будет информация Тут будет информация</string>
+    <string name="intro_title1">Добро пожаловать!</string>
+    <string name="intro_title2">Прохождение теста</string>
+    <string name="intro_title3">Справочник</string>
+    <string name="intro_title4">Сайт ИКНТ</string>
+    <string name="intro_text1">Наше приложение, ориентированное специально на абитуриентов,
+        сильно облегчит тебе жизнь. Ты сделал правильный выбор!</string>
+    <string name="intro_text2">Рекомендательный тест поможет выбрать верное направление
+        будущего обучения. Вопросы теста составлены студентами ИКНТ</string>
+    <string name="intro_text3">В справочнике можно ознакомиться с самой важной информацией
+        о направлениях</string>
+    <string name="intro_text4">Приложение максимально сжато и просто излагает информацию,
+        но настоятельно рекомендуем ознакомиться с оригинальными источниками</string>
 
 </resources>
