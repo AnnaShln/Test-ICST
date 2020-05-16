@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 "", "6", "251", ""));
         dbHelper.addQuestion(new Question(getString(R.string.quest5), 5,
                 getString(R.string.quest5ans1), getString(R.string.quest5ans2),
-                getString(R.string.quest5ans3), "27", "30", "7"));
+                getString(R.string.quest5ans3), "27", "30", "6"));
         dbHelper.addQuestion(new Question(getString(R.string.quest6), 6,
                 getString(R.string.quest6ans1), getString(R.string.quest6ans2),
                 "", "3", "7", ""));
@@ -185,6 +185,6 @@ public class MainActivity extends AppCompatActivity {
                 "", "4", "3", ""));
         dbHelper.addQuestion(new Question(getString(R.string.quest21), 21,
                 getString(R.string.quest21ans1), getString(R.string.quest21ans2),
-                "", "246", "37", ""));
+                "", "146", "37", ""));
     }
 }
