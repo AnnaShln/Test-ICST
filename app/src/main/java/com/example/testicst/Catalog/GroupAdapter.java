@@ -2,21 +2,17 @@ package com.example.testicst.Catalog;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.testicst.Catalog.Group;
 import com.example.testicst.R;
 
 import java.util.List;
@@ -73,6 +69,9 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
             fragment.setArguments(bundle);
 
             ((FragmentActivity)mContext).getSupportFragmentManager().beginTransaction()
+                    //.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+                    .setCustomAnimations(R.anim.slide_in_left, R.anim.slide_out_left,
+                            R.anim.slide_in_right, R.anim.slide_out_right)
                     .replace(R.id.fragment_container, fragment)
                     .commit();
         }

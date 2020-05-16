@@ -37,10 +37,6 @@ public class Question1 extends AppCompatActivity {
     boolean isPreviousQue = false; //Нужно для нажатии кнопки "Назад"
     ArrayList<ArrayList<Integer>> rememberAnswers = new ArrayList<>();
 
-    /**
-     * В каждой ячейке - массив (например [1, 2, 3]) - номера групп, которым нужно добавить балл
-     */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
