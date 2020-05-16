@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
@@ -83,9 +85,13 @@ public class Question1 extends AppCompatActivity {
                 mSecondAns.setText(answers.get(1));
                 //В БД если 3-его вопроса нет, то его строка равна ""
                 if (!answers.get(2).equals("")) {
+                    startAnimation(true);
                     mThirdAns.setText(answers.get(2));
                     mThirdAns.setVisibility(View.VISIBLE);
-                } else mThirdAns.setVisibility(View.GONE);
+                } else {
+                    mThirdAns.setVisibility(View.GONE);
+                    startAnimation(false);
+                }
 
             } else {
                 Intent intent = new Intent(this, MainActivity.class);
@@ -199,6 +205,14 @@ public class Question1 extends AppCompatActivity {
             }
         }
         return (maxIndex + 1);
+    }
+
+    public void startAnimation(boolean thirdOn){
+        Animation animation = AnimationUtils.loadAnimation(this,
+                R.anim.animation);
+        mFirstAns.startAnimation(animation);
+        mSecondAns.startAnimation(animation);
+        if (thirdOn) mThirdAns.startAnimation(animation);
     }
 
 }
