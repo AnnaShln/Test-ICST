@@ -201,46 +201,4 @@ public class Question1 extends AppCompatActivity {
         return (maxIndex + 1);
     }
 
-
-    /*      Оставлю просто так
-    //этот метод чтобы получить стринговое содержание по имени
-    public String getStringResourceByName(String aString) {
-        String packageName = getPackageName();
-        int resId = getResources().getIdentifier(aString, "string", packageName);
-        return getString(resId);
-    }
-    //в этих методах я формирую name нужного мне стринга в зависимости от номера вопроса.
-    private String createCounter (int c) {
-        // так как они однотипные
-        return "counter" + Integer.toString(c);
-    }
-
-    private String createQuestion (int c) {
-        return "quest" + Integer.toString(c);
-    }
-
-    private String createAns1 (int c) {
-        return "quest" + Integer.toString(c) + "ans1";
-    }
-
-    private String createAns2 (int c) {
-        return "quest" + Integer.toString(c) + "ans2";
-    }
-
-    private String createAns3 (int c) {
-        return "quest" + Integer.toString(c) + "ans3";
-    }
-
-    /** для изменения текста везде (счетчик, вопрос, ответы) мне надо было получить номер
-
-    private int getNumber (TextView textView){
-        //вопроса, я беру его из счетчика, и здесь короче читаю ео первые символы как раз для этого
-        CharSequence charSeq = textView.getText();
-        String str = charSeq.toString();
-        int numb1 = Character.getNumericValue(str.charAt(0));
-        if (str.charAt(1) != '/') {
-            int numb2 = Character.getNumericValue(str.charAt(1));
-            return numb1 * 10 + numb2;
-        } else return numb1;
-    } */
 }
