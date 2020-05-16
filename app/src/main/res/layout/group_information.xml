@@ -120,12 +120,20 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:ignore="MissingConstraints" />
+
             <TextView
                 android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
-                android:padding="16dp"
+                android:padding="10dp"
                 android:text="Speciality title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/color_title"

@@ -35,6 +35,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightGrey"
+                app:layout_constraintEnd_toEndOf="@+id/TextView_title"
+                tools:ignore="MissingConstraints" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

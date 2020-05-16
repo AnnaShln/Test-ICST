@@ -101,17 +101,17 @@ public class SpecialityList extends Fragment {
                         getString(R.string.Group4_name2_points), getString(R.string.Group4_name2_places),4));
                 specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name3), getString(R.string.Exam_MIR),
                         getString(R.string.Group4_name3_points), getString(R.string.Group4_name3_places),4));
-                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name3), getString(R.string.Exam_MIR),
+                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name4), getString(R.string.Exam_MIR),
                         getString(R.string.Group4_name4_points), getString(R.string.Group4_name4_places),4));
-                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name3), getString(R.string.Exam_MIR),
+                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name5), getString(R.string.Exam_MIR),
                         getString(R.string.Group4_name5_points), getString(R.string.Group4_name5_places),4));
 
                 break;
             case 5:
                 specialityList.add(new Speciality(getString(R.string.Group5),getString(R.string.Group5_description),
-                        getString(R.string.Group5_professions),getString(R.string.Group5_salary),getString(R.string.Group5_name1), getString(R.string.Exam_MIR),
+                        getString(R.string.Group5_professions),getString(R.string.Group5_salary),getString(R.string.Group5_name1), getString(R.string.Exam_MFR),
                         getString(R.string.Group5_name1_points), getString(R.string.Group5_name1_places),5));
-                specialityList.add(new Speciality(getString(R.string.Group5),getString(R.string.Group5_name2), getString(R.string.Exam_MIR),
+                specialityList.add(new Speciality(getString(R.string.Group5),getString(R.string.Group5_name2), getString(R.string.Exam_MFR),
                         getString(R.string.Group5_name2_points), getString(R.string.Group5_name2_places),5));
 
 
@@ -134,9 +134,9 @@ public class SpecialityList extends Fragment {
                 break;
             case 8:
                 specialityList.add(new Speciality(getString(R.string.Group8),getString(R.string.Group8_description),
-                        getString(R.string.Group8_professions),getString(R.string.Group8_salary),getString(R.string.Group8_name1), getString(R.string.Exam_MIR),
+                        getString(R.string.Group8_professions),getString(R.string.Group8_salary),getString(R.string.Group8_name1), getString(R.string.Exam_MFR),
                         getString(R.string.Group8_name1_points), getString(R.string.Group8_name1_places),8));
-                specialityList.add(new Speciality(getString(R.string.Group8),getString(R.string.Group8_name2), getString(R.string.Exam_MIR),
+                specialityList.add(new Speciality(getString(R.string.Group8),getString(R.string.Group8_name2), getString(R.string.Exam_MFR),
                         getString(R.string.Group8_name2_points), getString(R.string.Group8_name2_places),8));
                 break;
 
