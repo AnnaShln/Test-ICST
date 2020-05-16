@@ -115,6 +115,7 @@ public class QuestionsDbHelper extends SQLiteOpenHelper {
                     temp = getArrayFromStr(c.getString(c.getColumnIndex(QuestionsContract.QuestionTable.COLUMN_point2)));
                 if (ans.equals(ans3))
                     temp = getArrayFromStr(c.getString(c.getColumnIndex(QuestionsContract.QuestionTable.COLUMN_point3)));
+                break;
             }
         }
         c.close();

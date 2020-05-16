@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             SharedPreferences sPref;
             sPref = getPreferences(MODE_PRIVATE);
             SharedPreferences.Editor ed = sPref.edit();
-            ed.putInt(MainActivity.SAVED_RESULTS, id);
+            ed.putInt(SAVED_RESULTS, id);
             ed.commit();
             idDirection = id;
         }
@@ -125,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
 
         dbHelper.addQuestion(new Question(getString(R.string.quest1), 1,
                 getString(R.string.quest1ans1), getString(R.string.quest1ans2),
-                getString(R.string.quest1ans3), "6", "4", "2"));
+                getString(R.string.quest1ans3), "6", "4", "1"));
         dbHelper.addQuestion(new Question(getString(R.string.quest2), 2,
                 getString(R.string.quest2ans1), getString(R.string.quest2ans2),
                 "", "1", "0", ""));
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity {
                 "", "6", "251", ""));
         dbHelper.addQuestion(new Question(getString(R.string.quest5), 5,
                 getString(R.string.quest5ans1), getString(R.string.quest5ans2),
-                getString(R.string.quest5ans3), "27", "30", "7"));
+                getString(R.string.quest5ans3), "27", "30", "6"));
         dbHelper.addQuestion(new Question(getString(R.string.quest6), 6,
                 getString(R.string.quest6ans1), getString(R.string.quest6ans2),
                 "", "3", "7", ""));
@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                 getString(R.string.quest9ans3), "0", "32", "6"));
         dbHelper.addQuestion(new Question(getString(R.string.quest10), 10,
                 getString(R.string.quest10ans1), getString(R.string.quest10ans2),
-                "", "305", "27", ""));
+                "", "306", "27", ""));
         dbHelper.addQuestion(new Question(getString(R.string.quest11), 11,
                 getString(R.string.quest11ans1), getString(R.string.quest11ans2),
                 "", "347", "56", ""));
@@ -185,6 +185,6 @@ public class MainActivity extends AppCompatActivity {
                 "", "4", "3", ""));
         dbHelper.addQuestion(new Question(getString(R.string.quest21), 21,
                 getString(R.string.quest21ans1), getString(R.string.quest21ans2),
-                "", "246", "37", ""));
+                "", "146", "37", ""));
     }
 }
