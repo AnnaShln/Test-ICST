@@ -35,11 +35,11 @@ public class Question1 extends AppCompatActivity {
     ArrayList<String> allQuestions;
     int valueQuestions; //Количество вопросов
     boolean isPreviousQue = false; //Нужно для нажатии кнопки "Назад"
+    ArrayList<ArrayList<Integer>> rememberAnswers = new ArrayList<>();
 
     /**
      * В каждой ячейке - массив (например [1, 2, 3]) - номера групп, которым нужно добавить балл
      */
-    ArrayList<Integer[]> userAnswers = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class Question1 extends AppCompatActivity {
         dbHelper = new QuestionsDbHelper(this);
         //получаем все вопросы, содержащихся в БД
         allQuestions = dbHelper.getAllQuestions();
-        questionNumber = 1; //Начинаем с первого вопроса
+        questionNumber = 1;
         valueQuestions = allQuestions.size();
     }
 
@@ -68,12 +68,13 @@ public class Question1 extends AppCompatActivity {
 
         if (checkButtons() || isPreviousQue) {
 
-            if (!isPreviousQue) checkAnswer(v);
+            if (!isPreviousQue) checkAnswer();
             else isPreviousQue = false;
 
             if (questionNumber < valueQuestions) {
-
                 questionNumber++; //Следующий вопрос
+
+                checkRememberAns();
                 if (questionNumber > 1) mPreviousQue.setVisibility(View.VISIBLE);
                 else mPreviousQue.setVisibility(View.INVISIBLE);
                 ArrayList<String> answers = dbHelper.getAnswersOnQue(questionNumber); //Все ответы на вопрос
@@ -104,23 +105,26 @@ public class Question1 extends AppCompatActivity {
         }
     }
 
-    private void checkAnswer(View v) {
-        ArrayList<String> answers = dbHelper.getAnswersOnQue(questionNumber);
+    private void checkAnswer() {
+        ArrayList<Integer> answers = new ArrayList<>();
 
         if (mFirstAns.isChecked()) {
-            Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(0));
-            userAnswers.add(points);
+            answers.add(0);
         }
 
         if (mSecondAns.isChecked()) {
-            Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(1));
-            userAnswers.add(points);
+            answers.add(1);
         }
 
         if (mThirdAns.isChecked()) {
-            Integer[] points = dbHelper.getPointsForAns(questionNumber, answers.get(2));
-            userAnswers.add(points);
+            answers.add(2);
         }
+
+        if (rememberAnswers.size() >= questionNumber){
+            rememberAnswers.remove(questionNumber - 1);
+        }
+
+        rememberAnswers.add(questionNumber - 1, answers);
 
         allUnCheck();
     }
@@ -130,6 +134,19 @@ public class Question1 extends AppCompatActivity {
      * Проходимся по userAnswers с помощью foreach
      */
     public int[] getPointFromArray(){
+
+        ArrayList<Integer[]> userAnswers = new ArrayList<>();
+        int queNumber = 1;
+
+        for (ArrayList<Integer> i : rememberAnswers){
+            ArrayList<String> answers = dbHelper.getAnswersOnQue(queNumber);
+            for (int j : i){
+                Integer[] points = dbHelper.getPointsForAns(queNumber, answers.get(j));
+                userAnswers.add(points);
+            }
+            queNumber++;
+        }
+
         int[] point = new int[8];
         for (Integer[] i : userAnswers) {
             for (Integer j: i){
@@ -161,10 +178,10 @@ public class Question1 extends AppCompatActivity {
     public void backQuest(View view){
         if (questionNumber != 1)
         {
+            if (checkButtons()) checkAnswer();
             allUnCheck();
-            questionNumber -= 2;
-            userAnswers.remove(userAnswers.size() - 1);
             isPreviousQue = true;
+            questionNumber -= 2;
             nextQuest(view);
         }
     }
@@ -207,12 +224,37 @@ public class Question1 extends AppCompatActivity {
         return (maxIndex + 1);
     }
 
+    public void setAllAnswers()
+    {
+
+    }
+
     public void startAnimation(boolean thirdOn){
         Animation animation = AnimationUtils.loadAnimation(this,
                 R.anim.animation);
         mFirstAns.startAnimation(animation);
         mSecondAns.startAnimation(animation);
         if (thirdOn) mThirdAns.startAnimation(animation);
+    }
+
+    public void checkRememberAns()
+    {
+        if (rememberAnswers.size() >= questionNumber)
+        {
+            for (int j: rememberAnswers.get(questionNumber - 1)) {
+                switch (j) {
+                    case 0:
+                        mFirstAns.setChecked(true);
+                        break;
+                    case 1:
+                        mSecondAns.setChecked(true);
+                        break;
+                    case 2:
+                        mThirdAns.setChecked(true);
+                        break;
+                }
+            }
+        }
     }
 
 }
