@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:paddingTop="20dp">
+    android:paddingTop="10dp">
 
     <ImageView
         android:id="@+id/results_image"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/results_image"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="0dp"
         android:text="@string/weRecommend"
         android:textColor="@color/darkestGrey"
         android:textSize="17sp"
@@ -57,7 +57,7 @@
         android:layout_below="@+id/results_group"
         android:layout_centerHorizontal="true"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="30dp"
         android:gravity="center"
         android:text="@string/results_branches"
@@ -74,12 +74,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="25dp"
         android:background="@drawable/answers_style"
         android:paddingLeft="30dp"
-        android:paddingTop="15dp"
+        android:paddingTop="10dp"
         android:paddingRight="30dp"
-        android:paddingBottom="15dp"
+        android:paddingBottom="10dp"
         android:text="Пройти заново"
         android:textAllCaps="false"
         android:textColor="@color/white"
