@@ -25,9 +25,11 @@ public class MainActivity extends AppCompatActivity {
     public interface OnBackPressedListener {
         public void onBackPressed();
     }
+
     public void onBackPressed() {
         FragmentManager fm = getSupportFragmentManager();
         OnBackPressedListener backPressedListener = null;
+
         for (Fragment fragment: fm.getFragments()) {
             if (fragment instanceof  OnBackPressedListener) {
                 backPressedListener = (OnBackPressedListener) fragment;

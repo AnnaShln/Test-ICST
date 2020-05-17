@@ -1,8 +1,10 @@
 package com.example.testicst.Catalog;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -158,6 +160,13 @@ public class SpecialityList extends Fragment implements MainActivity.OnBackPress
 
     @Override
     public void onBackPressed() {
-        //SpecialityAdapter.onBackPressed();
+
+        getActivity().getSupportFragmentManager().beginTransaction()
+                //.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_CLOSE)
+                .setCustomAnimations(R.anim.slide_in_right, R.anim.slide_out_right,
+                        R.anim.slide_in_left, R.anim.slide_out_left)
+                .replace(R.id.fragment_container, new Handbook())
+                .commit();
+
     }
 }

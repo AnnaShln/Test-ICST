@@ -26,11 +26,6 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         this.specialityList =specialityList;
     }
 
-    public void onBackPressed() {
-        Handbook fragment = new Handbook();
-     /*   FragmentTransaction.replace(R.id.recyclerView, fragment);
-        fragmentTransaction.commit();*/
-    }
 
 
 
