@@ -18,7 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
 
-    final static String SAVED_RESULTS =  "idDirection";
+    final static public  String SAVED_RESULTS =  "idDirection";
     int idDirection;
 
     @Override

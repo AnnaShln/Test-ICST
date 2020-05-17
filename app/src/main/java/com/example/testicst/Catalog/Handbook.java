@@ -6,17 +6,20 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import com.example.testicst.Catalog.Group;
-import com.example.testicst.Catalog.GroupAdapter;
+import com.example.testicst.MainActivity;
 import com.example.testicst.R;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import static android.content.Context.MODE_PRIVATE;
 public class Handbook extends Fragment {
 
     RecyclerView recyclerView;
@@ -37,8 +40,10 @@ public class Handbook extends Fragment {
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         initData();
         initRecyclerView();
-
-
+        SharedPreferences sPref;
+        sPref = getActivity().getPreferences(MODE_PRIVATE);
+        int idDirection = sPref.getInt(MainActivity.SAVED_RESULTS,  -1);
+        GroupAdapter.greenIs(idDirection);
         return rootView;
     }
 
