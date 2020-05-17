@@ -1,28 +1,47 @@
 package com.example.testicst.Catalog;
+import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.testicst.MainActivity;
 import com.example.testicst.R;
 import java.util.List;
 public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.SpecialityVH> {
 
     private static final String TAG = "SpecialityAdapter";
+    private static Object Handbook;
     List<Speciality> specialityList;
 
     public SpecialityAdapter(List<Speciality> specialityList) {
         this.specialityList =specialityList;
     }
 
+    public void onBackPressed() {
+        Handbook fragment = new Handbook();
+     /*   FragmentTransaction.replace(R.id.recyclerView, fragment);
+        fragmentTransaction.commit();*/
+    }
+
+
+
     @NonNull
     @Override
     public SpecialityVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.group_information, parent, false);
+        Context mContext = parent.getContext();
         return new SpecialityVH(view);
     }
+
 
 
     @Override

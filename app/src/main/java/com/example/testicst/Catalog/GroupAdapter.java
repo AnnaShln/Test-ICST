@@ -26,6 +26,7 @@ public class GroupAdapter extends RecyclerView.Adapter<GroupAdapter.GroupVH> {
     private static Integer numberOfGreen;
     FragmentManager myFragmentManager;
     Context mContext;
+
     public static final String TAG = "GroupAdapter";
     List<Group> GroupList;
     public GroupAdapter(List<Group> groupList) {

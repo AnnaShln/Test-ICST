@@ -7,17 +7,19 @@ import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 
+import com.example.testicst.MainActivity;
 import com.example.testicst.R;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SpecialityList extends Fragment {
+public class SpecialityList extends Fragment implements MainActivity.OnBackPressedListener {
 
     RecyclerView recyclerView;
     List<Speciality> specialityList = new ArrayList<>();
@@ -31,7 +33,6 @@ public class SpecialityList extends Fragment {
         View rootView = inflater.inflate(R.layout.activity_speciality,container, false);
         recyclerView = rootView.findViewById(R.id.recyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
-        //initData(number_of_group);
 
         Bundle bundle = getArguments();
         if (bundle != null)
@@ -41,7 +42,17 @@ public class SpecialityList extends Fragment {
         else {
             idDirection = 1;
         }
-
+   /*     rootView.setFocusableInTouchMode(true);
+        rootView.requestFocus();
+        rootView.setOnKeyListener(new View.OnKeyListener() {
+            @Override
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+                if (keyCode == KeyEvent.KEYCODE_BACK)
+              SpecialityAdapter.onBackPressed();
+                    else return false;
+                return true;
+            }
+        });*/
         initData(idDirection);
         initRecyclerView();
         return rootView;
@@ -51,7 +62,6 @@ public class SpecialityList extends Fragment {
         SpecialityAdapter specialityAdapter = new SpecialityAdapter(specialityList);
         recyclerView.setAdapter(specialityAdapter);
     }
-
 
     private void initData(int idDirection)
     {
@@ -144,5 +154,10 @@ public class SpecialityList extends Fragment {
                 break;
 
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        //SpecialityAdapter.onBackPressed();
     }
 }
