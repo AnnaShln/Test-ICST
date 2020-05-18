@@ -25,7 +25,8 @@
                 android:paddingRight="15dp"
                 android:paddingBottom="0dp"
                 android:text="@string/infoTitle"
-                android:textColor="@color/color_title" />
+                android:textColor="@color/color_title"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/info1"
@@ -35,7 +36,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="0dp"
-                android:text="@string/info1" />
+                android:text="@string/info1"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/info2"
@@ -44,7 +46,8 @@
                 android:layout_marginTop="10dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:text="@string/info2" />
+                android:text="@string/info2"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/link2"
@@ -59,7 +62,8 @@
                 android:text="@string/link2"
                 android:textColor="@color/greyForAns"
                 android:textColorHighlight="@color/color_title"
-                android:textColorLink="@color/color_title" />
+                android:textColorLink="@color/color_title"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/link3"
@@ -73,7 +77,8 @@
                 android:paddingTop="5dp"
                 android:text="@string/link3"
                 android:textColor="@color/greyForAns"
-                android:textColorLink="@color/color_title" />
+                android:textColorLink="@color/color_title"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/link4"
@@ -84,7 +89,8 @@
                 android:linksClickable="true"
                 android:paddingLeft="15dp"
                 android:paddingTop="5dp"
-                android:text="@string/link4" />
+                android:text="@string/link4"
+                android:textSize="16sp" />
 
             <TextView
                 android:id="@+id/info5"
@@ -94,9 +100,8 @@
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
                 android:paddingBottom="15dp"
-                android:text="@string/info5" />
-
-
+                android:text="@string/info5"
+                android:textSize="16sp" />
             <ImageView
                 android:id="@+id/calendar1"
                 android:layout_width="match_parent"
