@@ -188,7 +188,7 @@ public class Question1 extends AppCompatActivity {
     public void setOnlyOneAns(View view){
         //Номер вопросов с множественными ответами, если будут больше, чем 1
         //обновлю базу данных, добавив к сущности Question: boolean isMultiplyAns
-        if (questionNumber != 16) {
+        if (questionNumber != 16 && questionNumber != 3) {
             int k = view.getId();
             switch (k) {
                 case R.id.quest1_ans1:
