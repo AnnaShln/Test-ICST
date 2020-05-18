@@ -135,7 +135,6 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 }
             };
-
     /**
      * Заполнение БД вопросами
      * Т.к. вы все вопросы писали в R.string, а брать их можно только в классе

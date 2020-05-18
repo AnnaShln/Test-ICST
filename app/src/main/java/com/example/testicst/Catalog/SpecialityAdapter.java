@@ -26,9 +26,6 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         this.specialityList =specialityList;
     }
 
-
-
-
     @NonNull
     @Override
     public SpecialityVH onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {

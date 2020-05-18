@@ -16,13 +16,86 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/info"
-                android:layout_width="match_parent"
+                android:id="@+id/infoTitle"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="8dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="0dp"
+                android:text="@string/infoTitle"
+                android:textColor="@color/color_title" />
+
+            <TextView
+                android:id="@+id/info1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
                 android:paddingRight="15dp"
-                android:text="@string/info" />
+                android:paddingBottom="0dp"
+                android:text="@string/info1" />
+
+            <TextView
+                android:id="@+id/info2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/info2" />
+
+            <TextView
+                android:id="@+id/link2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autoLink="phone"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/link2"
+                android:textColor="@color/greyForAns"
+                android:textColorHighlight="@color/color_title"
+                android:textColorLink="@color/color_title" />
+
+            <TextView
+                android:id="@+id/link3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autoLink="phone"
+                android:clickable="true"
+                android:linksClickable="true"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/link3"
+                android:textColor="@color/greyForAns"
+                android:textColorLink="@color/color_title" />
+
+            <TextView
+                android:id="@+id/link4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autoLink="email"
+                android:linksClickable="true"
+                android:paddingLeft="15dp"
+                android:paddingTop="5dp"
+                android:text="@string/link4" />
+
+            <TextView
+                android:id="@+id/info5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="15dp"
+                android:text="@string/info5" />
+
 
             <ImageView
                 android:id="@+id/calendar1"
@@ -53,6 +126,12 @@
                 android:contentDescription="third"
                 android:src="@drawable/calendar3"
                 app:layout_constraintTop_toBottomOf="@+id/calendar2" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
