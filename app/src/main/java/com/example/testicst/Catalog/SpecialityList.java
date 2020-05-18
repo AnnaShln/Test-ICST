@@ -77,7 +77,7 @@ public class SpecialityList extends Fragment implements MainActivity.OnBackPress
                         getString(R.string.Group1_name2), getString(R.string.Exam_MIR),
                         getString(R.string.Group1_name2_points), getString(R.string.Group1_name2_places),1));
                 specialityList.add(new Speciality(getString(R.string.Group1),
-                        getString(R.string.Group1_name3), getString(R.string.Exam_MFR),
+                        getString(R.string.Group1_name3), getString(R.string.Exam_MIR),
                         getString(R.string.Group1_name3_points), getString(R.string.Group1_name3_places),1));
                 specialityList.add(new Speciality(getString(R.string.Group1),
                         getString(R.string.Group1_name4), getString(R.string.Exam_MIR),
@@ -118,7 +118,7 @@ public class SpecialityList extends Fragment implements MainActivity.OnBackPress
                         getString(R.string.Group4_name3_points), getString(R.string.Group4_name3_places),4));
                 specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name4), getString(R.string.Exam_MIR),
                         getString(R.string.Group4_name4_points), getString(R.string.Group4_name4_places),4));
-                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name5), getString(R.string.Exam_MIR),
+                specialityList.add(new Speciality(getString(R.string.Group4),getString(R.string.Group4_name5), getString(R.string.Exam_MFR),
                         getString(R.string.Group4_name5_points), getString(R.string.Group4_name5_places),4));
 
                 break;
