@@ -31,7 +31,8 @@
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="24sp"
-            app:layout_constraintTop_toBottomOf="@+id/start_test_image" />
+            app:layout_constraintTop_toBottomOf="@+id/start_test_image"
+            style="?android:attr/borderlessButtonStyle"/>
 
     </LinearLayout>
 
