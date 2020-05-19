@@ -27,7 +27,9 @@ public class FragmentInfo extends Fragment {
         View view = inflater.inflate(R.layout.fragment_info, container, false);
         TextView textView = view.findViewById(R.id.info1);//находим TextView
 //Экранируем кавычки в атрибуте html тега слэшем:
-        String textWithLink = "<text>С правилами приёма и другими документами можно ознакомиться на сайте </text><a href=\"https://www.spbstu.ru/abit/bachelor/\">Поступление 2020</a>";
+        String textWithLink = "<text>С правилами приёма и другими документами можно ознакомиться на сайте" +
+                " </text><a href=\"https://www.spbstu.ru/abit/bachelor/\">Поступление 2020</a><text>." +
+                " Узнать больше об институте можно на сайте </text><a href=\"https://icst.spbstu.ru/\">ИКНТ</a><text>.</text>";
 //Указываем с помощью Html.fromHtml, что у нас не просто текст:
         textView.setText(Html.fromHtml(textWithLink, null, null));
 ////Указываем что разрешаем ссылки кликать:
