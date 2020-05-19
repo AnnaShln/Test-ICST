@@ -1,7 +1,9 @@
 package com.example.testicst;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
@@ -37,10 +39,12 @@ public class Question1 extends AppCompatActivity {
     boolean isPreviousQue = false; //Нужно для нажатии кнопки "Назад"
     ArrayList<ArrayList<Integer>> rememberAnswers = new ArrayList<>();
 
+    @SuppressLint("SourceLockedOrientationActivity")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.test_quest1);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         mNext = findViewById(R.id.next_quest);
         mCounter = findViewById(R.id.counter);

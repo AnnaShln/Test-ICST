@@ -21,7 +21,7 @@ public class Speciality extends Group{
     }
     public Speciality (String title,  String name, String exams, String points, String places, int idDirection)
     {
-        super("false", "false","false","false", idDirection);
+        super("", "","","", idDirection);
         this.name = name;
         this.exams = exams;
         this.places = places;

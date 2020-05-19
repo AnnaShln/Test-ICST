@@ -44,7 +44,7 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         holder.examsTextView.setText(speciality.getExams());
         holder.pointsTextView.setText(speciality.getPoints());
         holder.placesTextView.setText(speciality.getPlaces());
-        if (speciality.getDescription() != "false")
+        if (speciality.getDescription().length() > 2)
         {
             holder.descriptionTextView.setVisibility(View.VISIBLE);
             holder.salaryTextView.setVisibility(View.VISIBLE);
@@ -66,13 +66,11 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
             holder.textView7.setVisibility(View.GONE);
             holder.titleTextView.setVisibility(View.GONE);
         }
+
         boolean isExpanded = specialityList.get(position).isExpanded();
         holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
 
     }
-
-
-
 
     @Override
     public int getItemCount() {
