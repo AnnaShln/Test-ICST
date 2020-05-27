@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -68,8 +69,11 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         }
 
         boolean isExpanded = specialityList.get(position).isExpanded();
-        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
+        //не работает, но пусть будет на память о потерянном времени
+        if (isExpanded) holder.mArrowDown.animate().rotation(-180f).setDuration(300);
+        else holder.mArrowDown.animate().rotation(0).setDuration(300);
 
+        holder.expandableLayout.setVisibility(isExpanded ? View.VISIBLE : View.GONE);
     }
 
     @Override
@@ -84,6 +88,7 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
         ConstraintLayout expandableLayout;
         TextView nameTextView, examsTextView, pointsTextView, placesTextView, descriptionTextView,
                 professionsTextView, salaryTextView, titleTextView, textView6,textView7 ;
+        ImageView mArrowDown;
 
         public SpecialityVH(@NonNull final View itemView) {
             super(itemView);
@@ -98,6 +103,8 @@ public class SpecialityAdapter extends RecyclerView.Adapter<SpecialityAdapter.Sp
             placesTextView = itemView.findViewById(R.id.placesTextView);
             descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
+            mArrowDown = itemView.findViewById(R.id.arrowDown);
+
             nameTextView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {

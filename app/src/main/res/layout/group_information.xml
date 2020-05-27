@@ -129,12 +129,26 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 tools:ignore="MissingConstraints" />
 
+            <ImageView
+                android:id="@+id/arrowDown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/expandableLayout"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/nameTextView"
+                app:srcCompat="@drawable/arrowdown" />
+
             <TextView
                 android:id="@+id/nameTextView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="?attr/selectableItemBackground"
-                android:padding="10dp"
+                android:paddingLeft="10dp"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:paddingRight="30dp"
                 android:text="Speciality title"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium"
                 android:textColor="@color/color_title"
